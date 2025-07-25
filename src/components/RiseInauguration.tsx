@@ -22,7 +22,7 @@ const RiseInauguration = () => {
     
     const shapes = ['rounded-full', 'rounded-none', 'rounded-sm'];
     
-    return Array.from({ length: 80 }, (_, i) => (
+    return Array.from({ length: 120 }, (_, i) => (
       <div
         key={i}
         className={`absolute ${colors[i % colors.length]} ${shapes[i % shapes.length]} animate-confetti-fall opacity-90`}
@@ -38,7 +38,7 @@ const RiseInauguration = () => {
   };
 
   const createFireworks = () => {
-    return Array.from({ length: 12 }, (_, i) => (
+    return Array.from({ length: 20 }, (_, i) => (
       <div
         key={i}
         className="absolute w-4 h-4 bg-celebration-gold rounded-full animate-fireworks opacity-80"
@@ -62,7 +62,7 @@ const RiseInauguration = () => {
       'bg-celebration-purple'
     ];
     
-    return Array.from({ length: 12 }, (_, i) => (
+    return Array.from({ length: 18 }, (_, i) => (
       <div
         key={i}
         className={`absolute ${balloonColors[i % balloonColors.length]} rounded-full animate-balloon-float shadow-lg`}
@@ -84,7 +84,7 @@ const RiseInauguration = () => {
   };
 
   const createSparkles = () => {
-    return Array.from({ length: 40 }, (_, i) => (
+    return Array.from({ length: 60 }, (_, i) => (
       <div
         key={i}
         className="absolute animate-sparkle"
@@ -102,7 +102,7 @@ const RiseInauguration = () => {
 
   const createFloatingElements = () => {
     const elements = ['🎊', '🎉', '✨', '🌟', '💫', '🎈'];
-    return Array.from({ length: 15 }, (_, i) => (
+    return Array.from({ length: 25 }, (_, i) => (
       <div
         key={i}
         className="absolute text-2xl animate-float-gentle opacity-70"
@@ -130,11 +130,33 @@ const RiseInauguration = () => {
             background: 'var(--gradient-celebration)'
           }}
         >
-          {/* Decorative elements for page 1 */}
+          {/* Enhanced decorative elements for page 1 */}
           <div className="absolute top-10 left-10 w-20 h-20 bg-celebration-gold rounded-full animate-celebrate-pulse opacity-30" />
           <div className="absolute top-20 right-20 w-16 h-16 bg-celebration-pink rounded-full animate-celebrate-pulse opacity-40" style={{ animationDelay: '0.5s' }} />
           <div className="absolute bottom-20 left-20 w-24 h-24 bg-celebration-blue rounded-full animate-celebrate-pulse opacity-25" style={{ animationDelay: '1s' }} />
           <div className="absolute bottom-10 right-10 w-18 h-18 bg-celebration-purple rounded-full animate-celebrate-pulse opacity-35" style={{ animationDelay: '1.5s' }} />
+          
+          {/* Additional floating elements for page 1 */}
+          <div className="absolute top-1/3 left-5 w-12 h-12 bg-celebration-orange rounded-full animate-bounce opacity-40" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-1/2 right-5 w-14 h-14 bg-celebration-green rounded-full animate-bounce opacity-35" style={{ animationDelay: '2.5s' }} />
+          <div className="absolute top-3/4 left-1/4 w-10 h-10 bg-celebration-pink rounded-full animate-bounce opacity-45" style={{ animationDelay: '3s' }} />
+          <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-celebration-blue rounded-full animate-bounce opacity-30" style={{ animationDelay: '3.5s' }} />
+          
+          {/* Floating sparkles for page 1 */}
+          {Array.from({ length: 20 }, (_, i) => (
+            <div
+              key={i}
+              className="absolute animate-sparkle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 4}s`
+              }}
+            >
+              <div className="w-2 h-2 bg-celebration-gold transform rotate-45" 
+                   style={{ boxShadow: '0 0 10px currentColor' }} />
+            </div>
+          ))}
           
           <div className="text-center z-10 max-w-4xl mx-auto p-8">
             <div className="mb-8 animate-bounce-in">
@@ -154,7 +176,7 @@ const RiseInauguration = () => {
                 📅 Date: 26-07-2025
               </p>
               <p className="text-lg md:text-xl text-primary-foreground">
-                👤 Guest: XYZ, XYZ Position
+                👤 Guest: Smt. Subha Kalyan Ma'am (I.A.S)
               </p>
               <p className="text-lg md:text-xl text-primary-foreground">
                 📍 Tumkur, Karnataka, India
