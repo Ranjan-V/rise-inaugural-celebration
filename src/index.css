@@ -8,29 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 340 100% 97%;
+    --foreground: 280 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 280 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 280 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 280 95% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 100% 70%;
+    --secondary-foreground: 280 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 320 50% 95%;
+    --muted-foreground: 280 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 15 95% 65%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
+
+    /* Celebratory colors */
+    --celebration-gold: 45 100% 60%;
+    --celebration-pink: 320 85% 70%;
+    --celebration-blue: 220 95% 65%;
+    --celebration-green: 140 85% 60%;
+    --celebration-purple: 280 95% 70%;
+    --celebration-orange: 25 95% 65%;
+    
+    /* Gradients */
+    --gradient-celebration: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--celebration-pink)), hsl(var(--celebration-gold)));
+    --gradient-balloons: linear-gradient(45deg, hsl(var(--celebration-blue)), hsl(var(--celebration-purple)));
+    --gradient-confetti: linear-gradient(90deg, hsl(var(--celebration-orange)), hsl(var(--secondary)), hsl(var(--celebration-green)));
+    
+    /* Shadows */
+    --shadow-celebration: 0 20px 40px -10px hsl(var(--primary) / 0.4);
+    --shadow-float: 0 10px 30px -5px hsl(var(--celebration-pink) / 0.3);
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
